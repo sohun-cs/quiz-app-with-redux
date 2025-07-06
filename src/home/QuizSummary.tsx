@@ -6,29 +6,31 @@ import { Progress } from "@/components/ui/progress"
 
 export default function QuizSummary() {
 
+    // 
+
     return (
         <div>
-            <Card>
+            <Card className="max-w-lg mx-auto p-6 shadow-xl rounded-xl">
                 <CardHeader>
-                    <CardTitle>Quiz Summary</CardTitle>
+                    <CardTitle className="text-2xl font-bold">Quiz Summary</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <h3>You got 4 out of 10</h3>
+                    <h3 className="text-xl font-medium mb-4">You got 4 out of 10</h3>
 
                     {/* Progress Bar */}
-                    <Progress value={33} />
+                    <Progress value={33} className="h-4 rounded-full" />
 
-                    <div>
-                        <span>40%</span>
-                        <span>Performance: Good</span>
+                    <div className="flex justify-between mt-2">
+                        <span className="text-sm">40%</span>
+                        <span className="text-sm">Performance: Good</span>
                     </div>
 
-                    <div>
-                        <p><strong>Incorrect Answer: </strong></p>
+                    <div className="mb-4">
+                        <p className="text-sm"><strong>Incorrect Answer: </strong> 6</p>
                     </div>
 
-                    <div>
-                        <p>Great Job! Keep practicing</p>
+                    <div className="mt-4">
+                        <p className="text-sm">Great Job! Keep practicing</p>
                     </div>
 
                 </CardContent>
